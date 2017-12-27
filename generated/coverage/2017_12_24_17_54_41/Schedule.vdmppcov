@@ -1,0 +1,30 @@
+class Schedule
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+-- TODO Define instance variables here
+		private TimeOfStart: Types`Time;
+		private DayOfStart: Types`Date;
+		private stage: Stage;
+		private conference: Conference;
+		
+operations
+-- TODO Define operations here
+		public Schedule: Types`Time * Types`Date * Stage * Conference ==> Schedule
+		Schedule(n1,n2,n3,n4) == (TimeOfStart := n1; DayOfStart := n2; stage := n3; conference := n4; return self)
+		pre n3 <> stage or (n3 = stage and DayOfStart = n2 and TimeOfStart <> n1)
+		post TimeOfStart = n1 and DayOfStart = n2 and stage = n3 and conference = n4;
+		
+		public getDayOfStart: () ==>Types`Date
+		getDayOfStart() == return DayOfStart;
+		
+		public getTimeOfStart: () ==>Types`Time
+		getTimeOfStart() == return TimeOfStart;
+		
+functions
+-- TODO Define functiones here
+traces
+-- TODO Define Combinatorial Test Traces here
+end Schedule

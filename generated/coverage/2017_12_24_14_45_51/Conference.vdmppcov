@@ -1,0 +1,31 @@
+class Conference
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+-- TODO Define instance variables here
+	 	private speakers: set of Speaker :={};
+		private attendees: set of Attendee :={};
+		
+operations
+-- TODO Define operations here
+		public Conference:  set of Speaker * set of Attendee ==> Conference
+		Conference(n2,n3) == (speakers := n2; attendees := n3);	
+		
+		public getAttendees:() ==> int
+		getAttendees() ==(
+					dcl count: real := 0;
+					
+					for all attendee in set attendees
+								do count := count + 1;
+					
+					return count;
+		);
+	 
+functions
+-- TODO Define functiones here
+		
+traces
+-- TODO Define Combinatorial Test Traces here
+end Conference

@@ -1,0 +1,24 @@
+class Showroom
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+-- TODO Define instance variables here
+		private startups: set of startup :={};
+		private DayOfStart: Types`Date;
+		private DayOfEnd: Types`Date;
+operations
+-- TODO Define operations here
+		public Showroom:  set of startup * Types`Date * Types`Date ==> Showroom
+	Showroom(n1,n2,n3) == (startups := n1; DayOfStart := n2; DayOfEnd := n3; return self)
+	post startups = n1 and DayOfStart = n2 and DayOfEnd = n3;
+	
+	public addStartupToShowroom: startup ==> ()
+	addStartupToShowroom(n1) == startups := startups union {n1}
+	pre n1 not in set startups;
+functions
+-- TODO Define functiones here
+traces
+-- TODO Define Combinatorial Test Traces here
+end Showroom
