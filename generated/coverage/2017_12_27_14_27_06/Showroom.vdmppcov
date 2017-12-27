@@ -10,9 +10,9 @@ instance variables
 		private DayOfEnd: Types`Date;
 operations
 -- TODO Define operations here
-		public Showroom:  Types`Date * Types`Date ==> Showroom
-	Showroom(n2,n3) == (DayOfStart := n2; DayOfEnd := n3; return self)
-	post DayOfStart = n2 and DayOfEnd = n3;
+		public Showroom:  set of startup * Types`Date * Types`Date ==> Showroom
+	Showroom(n1,n2,n3) == (startups := n1; DayOfStart := n2; DayOfEnd := n3; return self)
+	post startups = n1 and DayOfStart = n2 and DayOfEnd = n3;
 	
 	public addStartupToShowroom: startup ==> ()
 	addStartupToShowroom(n1) == startups := startups union {n1}

@@ -36,10 +36,6 @@ public test() == (
 		IO`print("testgetEventbyTitle -> ");
 		testgetTitle();
 		IO`println("Success");
-		
-		IO`print("testcreateShowroom -> ");
-		testaddShowroom();
-		IO`println("Success");
 	
 	
 	);
@@ -152,18 +148,6 @@ public test() == (
 		schedules := summit1.getConferenceWithTitle("Renewable energies");
 		assert(schedules.getConference().getTitle() = "Renewable energies");
 	
-	
-	);
-	
-	public testaddShowroom() ==(
-	
-	dcl startup2:startup := new startup("Tesla","USA");
-	
-	dcl showroom1:Showroom := new Showroom(mk_Types`Date(20,5,2010),mk_Types`Date(21,5,2010));
-	dcl list:set of startup;
-	showroom1.addStartupToShowroom(startup2);
-	list := showroom1.getStartups();
-	assert(startup2 in set list);
 	
 	);
 functions
