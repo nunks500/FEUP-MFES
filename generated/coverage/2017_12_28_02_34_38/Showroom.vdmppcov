@@ -23,27 +23,13 @@ operations
 	
 	public getStartupByName: seq of char ==> startup
 	getStartupByName(n1) == (
-	dcl temp :startup;
+	
 				for all companies in set startups do(
 				if companies.getName() = n1
-				then temp := companies;
-				
-				
+				then return companies
+				else
+				return false;
 				);
-				
-				return temp;
-	);
-	
-		public getStartupByCountry: seq of char ==> set of startup
-	getStartupByCountry(n1) == (
-				dcl temp:set of startup;
-				
-				for all companies in set startups do(
-				if companies.getCountryOfOrigin() = n1
-				then temp:= temp union {companies}
-				
-				);
-				return temp;
 	);
 	
 functions

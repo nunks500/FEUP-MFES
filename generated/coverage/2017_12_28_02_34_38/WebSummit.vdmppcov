@@ -29,20 +29,6 @@ public addStartup: startup ==> ()
 addStartup(startup) == startups := startups union {startup}
 post startup in set startups;
 
-public getNewsByTitle: seq of char ==>News
-getNewsByTitle(n1) ==(
-
-				dcl temp:News;
-				for all noticias in set jornal do
-				(
-						if noticias.getTitle() = n1
-						then temp := noticias;
-				
-				);
-				return temp;
-		
-);
-
 public addSchedule: Schedule ==> ()
 addSchedule(schedule) == (
 			dcl exist:int := 0;

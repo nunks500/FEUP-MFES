@@ -16,9 +16,6 @@ operations
 	
 	public getName:() ==> seq of char
 	getName() == return name;
-	
-	public getCountryOfOrigin:() ==> seq of char
-	getCountryOfOrigin() == return CountryOfOrigin;
 
 functions
 -- TODO Define functiones here
