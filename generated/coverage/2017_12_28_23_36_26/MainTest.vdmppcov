@@ -59,12 +59,9 @@ public test() == (
 	
 	public testAddNews() == (
 		dcl summit1: WebSummit := new WebSummit();
-		dcl n2:News;
 		dcl n1: News := new News("Inscriptions for WebSummit Open","Inscriptions are open from 20th February to 20th March",mk_Types`Date(21,12,2012));
 		summit1.addNews(n1);
-		n2 := summit1.getNewsByTitle("Inscriptions for WebSummit Open");
 		assert(n1 in set summit1.getNews());
-		assert(n1 = n2);
 	
 	);
 	
