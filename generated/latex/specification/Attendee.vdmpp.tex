@@ -1,0 +1,24 @@
+\begin{vdmpp}[breaklines=true]
+class Attendee
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+-- TODO Define instance variables here
+  public name: seq of char;
+operations
+-- TODO Define operations here
+(*@
+\label{Attendee:11}
+@*)
+  public Attendee: seq of char ==> Attendee
+ Attendee(n1) == (name := n1; return self)
+ post name = n1;
+ 
+functions
+-- TODO Define functiones here
+traces
+-- TODO Define Combinatorial Test Traces here
+end Attendee
+\end{vdmpp}

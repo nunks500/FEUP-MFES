@@ -1,0 +1,23 @@
+\begin{vdmpp}[breaklines=true]
+class Speaker
+types
+-- TODO Define types here
+values
+-- TODO Define values here
+instance variables
+-- TODO Define instance variables here
+  public name: seq of char;
+operations
+-- TODO Define operations here
+(*@
+\label{Speaker:11}
+@*)
+  public Speaker: seq of char ==> Speaker
+ Speaker(n1) == (name := n1; return self)
+ post name = n1;
+functions
+-- TODO Define functiones here
+traces
+-- TODO Define Combinatorial Test Traces here
+end Speaker
+\end{vdmpp}
